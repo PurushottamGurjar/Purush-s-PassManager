@@ -1,0 +1,25 @@
+.navbar-container{
+    height:50px;
+    width:100vw;
+    background-color: rgb(0, 9, 11);
+    display:flex;
+    gap:clamp(1rem,10vw,50rem);
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.navbar-title{
+    font-size:clamp(1.2rem,3.5vw,2rem);
+}
+
+.navbar-elements{
+    display:flex;
+    gap:clamp(1rem,3vw,2.5rem);
+}
+.each-nav-element{
+     font-size:clamp(0.8rem,2vw,1.2rem);
+     cursor:pointer;
+}
+.each-nav-element:hover{
+    color:wheat;
+}
