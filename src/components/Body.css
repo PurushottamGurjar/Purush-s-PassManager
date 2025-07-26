@@ -21,7 +21,7 @@
 .site-name{
     width:60vw;
     border-radius: 8px;
-    height:30px;
+    height:40px;
 }
 .input-container-secondary{
     width:60vw;
@@ -32,7 +32,7 @@
 }
 .site-password{
     width:25vw;
-    height:30px;
+    height:40px;
     border-radius: 8px;
 }
 
@@ -41,7 +41,7 @@ input{
     padding-top:13px;
     box-sizing: border-box;
     font-size:clamp(0.7rem,1.7vw,1rem);
-    height:30px;
+    height:40px;
     background-color: white;
 }
 
@@ -52,7 +52,7 @@ input::placeholder{
 
 .submit-button{
     width:40vw;
-    height:35px;
+    height:40px;
     background-color: rgb(65, 4, 105);
     border-radius: 10px;
     color:white;
@@ -60,4 +60,65 @@ input::placeholder{
     border:1px soid rgb(196, 155, 223) ;
     font-size:clamp(0.8rem,2vw,1.2rem);
     
+}
+.password-displayer{
+    font-size:clamp(1.2rem,3.5vw,2rem);
+    text-align: center;
+    margin-top: 100px;
+}
+.password-displayer-container{
+    width:80vw;
+    margin:auto;
+}
+.password-displayer-heading{
+    display:flex;
+    font-size:clamp(0.8rem,2vw,1.2rem);
+    font-size:bold;
+    background-color: #7230d6;
+    font-family: sans-serif;
+    border-radius: 20px;
+    padding:0px;
+    justify-content: space-around;
+
+}
+.password-displayer-heading-site{
+    width:30%;
+}
+.password-displayer-site{
+    background-color:rgb(47, 28, 83);
+    width:30%;
+    border:2px solid black;
+    padding:5px;
+    border-radius:5px;
+    margin:10px;
+}
+.password-displayer-item{
+    display:flex;
+    font-size:clamp(0.8rem,2vw,1.2rem);
+    font-family: sans-serif;
+    justify-content: space-around;
+    padding:0px;
+
+}
+
+
+@media(max-width:800px){
+    .input-container-secondary{
+        display:flex;
+        flex-direction: column;
+    }
+    .site-password ,.site-name{
+        width:80vw;
+        align-self: center;
+    }
+    .password-displayer-container{
+        width:98vw;
+        margin:auto;
+    }
+    .password-displayer-heading{
+        border-radius: 10px;;
+    }
+    
+
+
 }

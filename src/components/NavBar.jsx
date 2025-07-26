@@ -7,8 +7,7 @@ const NavBar = () => {
         <div className="navbar-title">Purush Passwords</div>
         <div className="navbar-elements">
             <p className="each-nav-element">Home</p>
-            <p className="each-nav-element">About</p>
-            <p className="each-nav-element">Contact</p>
+            <p className="each-nav-element">About</p> 
             <p className="each-nav-element">Developer</p>
         </div>
 
