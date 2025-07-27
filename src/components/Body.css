@@ -115,7 +115,7 @@ input::placeholder{
 }
 .index-delete-container{
     display:flex;
-    gap:20px;
+    gap:19px;
 }
 .extra{
     height:100px;
