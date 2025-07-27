@@ -113,6 +113,10 @@ input::placeholder{
     background-color: #1f1233;
 
 }
+.index-delete-container{
+    display:flex;
+    gap:20px;
+}
 .extra{
     height:100px;
     width:100%;

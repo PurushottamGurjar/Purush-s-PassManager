@@ -23,8 +23,6 @@ const Body = () => {
         setPasswordIndex(passwordIndex+1);
         setPasswordArray([...passwordArray,form]);
         localStorage.setItem("passwords",JSON.stringify([...passwordArray,form]));
-        console.log([...passwordArray,form]);
-        console.log(form);
 
         setForm({site:"",username:"",password:"",index:passwordIndex+1});
     }
@@ -56,7 +54,18 @@ const Body = () => {
             <div className="password-displayer-content">
                 {passwordArray.map((items,id)=>(
                     <div key={id} className="password-displayer-item">
-                        <p className="password-displayer-index">{items.index}</p>
+
+                        <div className="index-delete-container">
+                            <p className="password-displayer-index">{items.index}</p>
+                            <svg xmlns="http://www.w3.org/2000/svg "
+                                style={{alignSelf:'center'}} 
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" 
+                                stroke-width="2" width="24" height="24">
+                                <path stroke-linecap="round" stroke-linejoin="round" 
+                                d="M6 7h12M9 7V4h6v3M10 11v6m4-6v6m5-10H5l1 14h12l1-14z" />
+                            </svg>
+                        </div>
+
                         <p className="password-displayer-site">{items.site}</p>
                         <p className="password-displayer-site">{items.username}</p>
                         <p className="password-displayer-site">{items.password}</p>
