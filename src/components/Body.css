@@ -78,26 +78,50 @@ input::placeholder{
     font-family: sans-serif;
     border-radius: 20px;
     padding:0px;
+    margin-bottom: 20px;
     justify-content: space-around;
 
 }
 .password-displayer-heading-site{
-    width:30%;
+    width:29%;
 }
 .password-displayer-site{
     background-color:rgb(47, 28, 83);
-    width:30%;
-    border:2px solid black;
+    width:29%;
+    border:1px solid black;
     padding:5px;
     border-radius:5px;
     margin:10px;
+}
+.password-displayer-index{
+    width:5%;
+    margin-left: 25px;
+}
+
+.password-displayer-heading-index{
+    width:10%;
+    margin-left: 10px;
 }
 .password-displayer-item{
     display:flex;
     font-size:clamp(0.8rem,2vw,1.2rem);
     font-family: sans-serif;
     justify-content: space-around;
+    border:1px solid black;
     padding:0px;
+    border-radius:20px;
+    background-color: #1f1233;
+
+}
+.extra{
+    height:100px;
+    width:100%;
+}
+
+.password-displayer-content{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 
 }
 

@@ -3,11 +3,15 @@ import "./Body.css"
 
 const Body = () => {
     const [passwordArray,setPasswordArray]=useState([]);
-    const [form,setForm]=useState({site:"",username:"",password:""});
+    const [passwordIndex,setPasswordIndex]=useState(1);
+    const [form,setForm]=useState({index:passwordIndex,site:"",username:"",password:""});
+    
     useEffect(() => {
           let passwords=localStorage.getItem("passwords");
           if(passwords){
             setPasswordArray(JSON.parse(passwords));
+            setPasswordIndex(JSON.parse(passwords).length+1);
+            console.log("the curr len of the password array is ",passwordIndex);
           }else{
             passwords=[];
           }
@@ -15,12 +19,14 @@ const Body = () => {
 
     const HandleSubmit=(e)=>{
         e.preventDefault();
+        form.index=passwordIndex;
+        setPasswordIndex(passwordIndex+1);
         setPasswordArray([...passwordArray,form]);
         localStorage.setItem("passwords",JSON.stringify([...passwordArray,form]));
         console.log([...passwordArray,form]);
         console.log(form);
 
-        setForm({site:"",username:"",password:"" });
+        setForm({site:"",username:"",password:"",index:passwordIndex+1});
     }
   return (
     <div className='body'>
@@ -42,6 +48,7 @@ const Body = () => {
         </div>
         <div className="password-displayer-container">
             <div className="password-displayer-heading">
+                <p className="password-displayer-heading-index">Index</p>
                 <p className="password-displayer-heading-site">Website Name</p>
                 <p className="password-displayer-heading-site">Your UserName</p>
                 <p className="password-displayer-heading-site">Your Password</p>
@@ -49,12 +56,14 @@ const Body = () => {
             <div className="password-displayer-content">
                 {passwordArray.map((items,id)=>(
                     <div key={id} className="password-displayer-item">
+                        <p className="password-displayer-index">{items.index}</p>
                         <p className="password-displayer-site">{items.site}</p>
                         <p className="password-displayer-site">{items.username}</p>
                         <p className="password-displayer-site">{items.password}</p>
                     </div>
                 ))}
             </div>
+            <div className="extra"></div>
 
            
 

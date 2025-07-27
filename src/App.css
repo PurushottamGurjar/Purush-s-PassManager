@@ -5,9 +5,14 @@ body{
 }
 
 .App-Container{
-  height:100vh;
-  width:100vw;
+  height:100%;
+  width:100%;
   position:fixed;
+  overflow: auto;
   background: radial-gradient(125% 125% at 50% 10%, #000000 40%, #6633ee 100%);
 
+}
+
+.App-Container::-webkit-scrollbar{
+  display:none;
 }
