@@ -69,6 +69,7 @@ input::placeholder{
 .password-displayer-container{
     width:80vw;
     margin:auto;
+
 }
 .password-displayer-heading{
     display:flex;
@@ -80,6 +81,8 @@ input::placeholder{
     padding:0px;
     margin-bottom: 20px;
     justify-content: space-around;
+    display:flex;
+    flex-wrap: wrap;;
 
 }
 .password-displayer-heading-site{
@@ -136,17 +139,55 @@ input::placeholder{
         flex-direction: column;
     }
     .site-password ,.site-name{
-        width:80vw;
+        width:92vw;
         align-self: center;
     }
     .password-displayer-container{
         width:98vw;
         margin:auto;
+        padding:10px;
+        box-sizing: border-box;
     }
+    .password-displayer-heading-site,.password-displayer-heading-index{
+        width:45%;
+    }
+    .password-displayer-heading-index{
+        margin-left:0;
+    }
+
     .password-displayer-heading{
-        border-radius: 10px;;
+        border-radius: 10px;
+        display:flex;
+        flex-wrap: wrap;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .password-displayer-item{
+        border-radius: 10px;
+        display:flex;
+        flex-wrap: wrap;
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .password-displayer-site{
+        width:40vw;
+    }
+    .password-displayer-username{
+        width:80vw;
+    }
+    .password-displayer-itemSite{
+        width:60vw;
+    }
+
+    .password-displayer-index{
+        /* margin-top: 17px; */
+        font-size:16px;
     }
     
+
+
 
 
 }

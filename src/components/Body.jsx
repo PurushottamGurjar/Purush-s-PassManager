@@ -132,9 +132,9 @@ const Body = () => {
                   />
                 </svg>
               </div>
-              <p className="password-displayer-site">{items.site}</p>
-              <p className="password-displayer-site">{items.username}</p>
-              <p className="password-displayer-site">{items.password}</p>
+              <p className="password-displayer-site password-displayer-itemSite">{items.site}</p>
+              <p className="password-displayer-site password-displayer-username">{items.username}</p>
+              <p className="password-displayer-site password-displayer-username">{items.password}</p>
             </div>
           ))}
         </div>
